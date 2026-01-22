@@ -1,4 +1,4 @@
 # desenvolve-python-basico
-Projeto Desenvolve - Bom Despacho-MG
+Projeto Desenvolve - Bom Despacho
 Programação básica com Python
-PD243
+PDBD243
