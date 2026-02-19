@@ -1,0 +1,32 @@
+n_experimentos = int(input())
+
+total_cobaias = 0
+total_coelhos = 0
+total_ratos = 0
+total_sapos = 0
+
+for _ in range(n_experimentos):
+    entrada = input().split()
+    quantia = int(entrada[0])
+    tipo = entrada[1].upper()
+    
+    total_cobaias += quantia
+    
+    if tipo == 'C':
+        total_coelhos += quantia
+    elif tipo == 'R':
+        total_ratos += quantia
+    elif tipo == 'S':
+        total_sapos += quantia
+
+p_coelhos = (total_coelhos / total_cobaias) * 100
+p_ratos = (total_ratos / total_cobaias) * 100
+p_sapos = (total_sapos / total_cobaias) * 100
+
+print(f"Total: {total_cobaias} cobaias")
+print(f"Total de coelhos: {total_coelhos}")
+print(f"Total de ratos: {total_ratos}")
+print(f"Total de sapos: {total_sapos}")
+print(f"Percentual de coelhos: {p_coelhos:.2f} %")
+print(f"Percentual de ratos: {p_ratos:.2f} %")
+print(f"Percentual de sapos: {p_sapos:.2f} %")
