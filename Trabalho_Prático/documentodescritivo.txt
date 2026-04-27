@@ -1,0 +1,28 @@
+-Introdução:
+A empresa modelada é a FootStats Pro, uma agência de inteligência esportiva que gerencia dados de atletas para clubes de futebol. O sistema possui dois níveis de usuários: Admin (Gerentes de Scouting com permissão total) e Cliente (Analistas com permissão de leitura e busca). O produto oferecido é a base de dados de "Valores de Mercado e Atletas".
+
+
+-Implementação:
+Usuários:
+Estrutura de Dados: Dicionário de namedtuple (Usuario). O login é a chave para busca rápida.
+Registro: Arquivo usuarios.txt em formato CSV.
+
+Funcionalidades CRUD:
+C: Cadastro de novos usuários.
+R: Leitura do arquivo no início do sistema e validação de Login.
+U: (Neste modelo, a atualização ocorre via sobrescrita no cadastro de permissões).
+D: (Pode ser implementado seguindo a lógica de filtragem).
+
+Produtos (Jogadores):
+Estrutura de Dados: Lista de namedtuple (Jogador) para facilitar a ordenação e exibição.
+Registro: Arquivo jogadores.txt em formato CSV.
+
+Funcionalidades CRUD:
+C: Função de adicionar novo atleta (exclusivo Admin).
+R: Listagem por nome, listagem por preço e busca específica.
+U: Salvar a lista atualizada sobrescrevendo o arquivo.
+D: Remover atleta da lista e atualizar o arquivo.
+ 
+
+-Conclusão:
+A maior dificuldade foi garantir a persistência dos dados sem corromper o arquivo CSV ao lidar com tipos numéricos (float). A escolha da biblioteca rich e de namedtuples foi bem-sucedida, pois permitiu um código limpo, organizado e com interface amigável. Em versões futuras, separaria o código em módulos para facilitar a manutenção.
